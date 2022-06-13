@@ -1,5 +1,5 @@
 all:
-	npx tailwindcss build -i ./src/input.css -o ./dist/output.css
+	npx tailwindcss build -c tailwind.config.js -i ./src/input.css -o ./dist/output.css
 	npx dessi --source=./src --target=./dist
 
 serve:

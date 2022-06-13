@@ -499,12 +499,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 20;
 }
 
+.mr-12{
+  margin-right: 3rem;
+}
+
+.mb-12{
+  margin-bottom: 3rem;
+}
+
 .mr-4{
   margin-right: 1rem;
 }
 
+.ml-12{
+  margin-left: 3rem;
+}
+
 .flex{
   display: flex;
+}
+
+.grid{
+  display: grid;
 }
 
 .hidden{
@@ -531,6 +547,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex: none;
 }
 
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2{
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -547,12 +571,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
+.gap-16{
+  gap: 4rem;
+}
+
 .overflow-x-hidden{
   overflow-x: hidden;
 }
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.bg-persimmon{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 88 18 / var(--tw-bg-opacity));
 }
 
 .bg-yellow-500{
@@ -565,9 +598,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-zinc-200{
+.bg-timberwolf{
   --tw-bg-opacity: 1;
-  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
+  background-color: rgb(229 218 218 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-farm{
@@ -588,6 +626,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-repeat-x{
   background-repeat: repeat-x;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .py-16{
@@ -687,9 +729,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: 0.05em;
 }
 
-.text-ex-white{
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
+.text-zinc-200{
   --tw-text-opacity: 1;
-  color: rgb(244 249 233 / var(--tw-text-opacity));
+  color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 
 .text-yellow-500{

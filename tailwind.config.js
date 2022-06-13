@@ -13,14 +13,15 @@ module.exports = {
         'sub-mono': ["Source Code Pro"],
       },
       fontSize: {
-        'huge': '20rem'
+        'huge': '20rem',
+        'giant': '35rem',
       },
       colors: {
-        'ex-black': '#000000',
-        'ex-white': '#F4F9E9',
-        'ex-pearl': '#CBC9AD',
-        'ex-coral': '#FE5E41',
-        'ex-blue':  '#0F7173',
+        'orange-yellow': '#EAB308',
+        'skobeloff': '#297373',
+        'persimmon': '#E55812',
+        'timberwolf': '#E5DADA',
+        'rich-black': '#02040F',
       }
     },
   },
