@@ -1,8 +1,6 @@
 all:
-	npx tailwindcss build -i ./src/input.css -o ./src/dist/output.css
-
-watch:
-	npx tailwindcss build -i ./src/input.css -o ./src/dist/output.css --watch
+	npx tailwindcss build -i ./src/input.css -o ./dist/output.css
+	npx dessi --source=./src --target=./dist
 
 serve:
-	python3 -m http.server --dir ./src
+	python3 -m http.server --dir ./dist
