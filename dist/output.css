@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,200;1,300;1,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,900;1,200;1,300;1,400&display=swap'); */
 
-/*
-! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
-*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+
+/* ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -539,6 +539,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.w-72{
+  width: 18rem;
+}
+
 .max-w-lg{
   max-width: 32rem;
 }
@@ -583,24 +587,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
-.bg-persimmon{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 88 18 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
-}
-
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-timberwolf{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 218 218 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -668,6 +657,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
 }
 
+.pl-16{
+  padding-left: 4rem;
+}
+
+.pr-16{
+  padding-right: 4rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -685,16 +686,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .font-display{
-  font-family: Source Sans Pro;
+  font-family: Roboto;
 }
 
 .font-sub-mono{
   font-family: Source Code Pro;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-9xl{
@@ -721,6 +717,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.75rem;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-8xl{
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -730,12 +736,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
-.tracking-wider{
-  letter-spacing: 0.05em;
-}
-
 .tracking-wide{
   letter-spacing: 0.025em;
+}
+
+.tracking-wider{
+  letter-spacing: 0.05em;
 }
 
 .text-zinc-200{
@@ -748,9 +754,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
-.underline{
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.text-orange_yellow{
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.line-through{
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
 }
 
 #cloud-scrolling-image {
@@ -786,6 +802,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px){
+  .sm\:bg-black{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+
   .sm\:text-left{
     text-align: left;
   }
@@ -798,6 +819,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px){
   .md\:mr-6{
     margin-right: 1.5rem;
+  }
+
+  .md\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:pt-12{
@@ -839,6 +865,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:text-justify{
     text-align: justify;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:block{
+    display: block;
+  }
+
+  .xl\:grid{
+    display: grid;
+  }
+
+  .xl\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .xl\:grid-rows-1{
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+
+  .xl\:gap-72{
+    gap: 18rem;
+  }
+}
+
+@media (min-width: 1536px){
+  .\32xl\:text-9xl{
+    font-size: 8rem;
+    line-height: 1;
   }
 }
 

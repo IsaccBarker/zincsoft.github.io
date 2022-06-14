@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        forest: "url('/assets/imgs/land.jpg')",
+        land: "url('/assets/imgs/land.jpg')",
+        forest: "url('/assets/imgs/forest.jpg')",
         clouds: "url('/assets/imgs/clouds.png')",
-        farm: "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/imgs/farm.jpg')"
+        farm: "linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/imgs/farm.jpg')",
       }),
       fontFamily: {
-        'display': ["Source Sans Pro"],
+        'display': ["Roboto"],
         'sub-mono': ["Source Code Pro"],
       },
       fontSize: {
@@ -17,11 +18,11 @@ module.exports = {
         'giant': '35rem',
       },
       colors: {
-        'orange-yellow': '#EAB308',
+        'orange_yellow': '#EAB308',
         'skobeloff': '#297373',
         'persimmon': '#E55812',
         'timberwolf': '#E5DADA',
-        'rich-black': '#02040F',
+        'rich_black': '#02040F',
       }
     },
   },
