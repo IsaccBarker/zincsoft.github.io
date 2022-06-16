@@ -47,9 +47,10 @@ def get_new_index
     end
 
     current = template_entry
+
+    puts file.gsub(".html", ".md")
     markdown_file = "./markdown/" + file.gsub(".html", ".md")
     markdown_data = File.open("." + markdown_file).read
-
     current = current.gsub('<!-- HTML FILE -->', './html/' + file)
     current = current.gsub('<!-- MARKDOWN FILE -->', markdown_file)
     current = current.gsub('<!-- TITLE -->', markdown_data.lines.first)
@@ -81,20 +82,22 @@ elsif ARGV[0] == 'html'
     exit
   end
 
-  progressbar = ProgressBar.create(:total => ARGV.length - 1, :length => 100, :progress_mark => '#', :remainder_mark => '-')
+  # progressbar = ProgressBar.create(:total => ARGV.length - 1, :length => 100, :progress_mark => '#', :remainder_mark => '-')
 
   ARGV.drop(1).each do |file|
     friendly = file.split('/')[-1].gsub('.md', '')
 
-    progressbar.log friendly + '...'
+    # progressbar.log friendly + '...'
+    puts friendly + '...'
 
-    File.open('../html/' + friendly + '.html', 'w') { |f| f.write transpile(file) }
+    File.open('../html/' + friendly + '.html', 'w+') { |f| f.write transpile(file) }
 
-    progressbar.increment
+    # progressbar.increment
   end
 
   puts 'Writting index...'
-  File.open('../index.html', 'w') { |f| f.write get_new_index }
+  get_new_index
+  # File.open('../index.html', 'w') { |f| f.write get_new_index }
 
   exit
 end
