@@ -14,7 +14,7 @@ Subcommands:
 end
 
 def pull
-  Dir.chdir('../../../')
+  Dir.chdir('../../../../../')
 
   system('git fetch catnet-rfcs main')
   system('git subtree pull --prefix src/catnet/markdown catnet-rfcs main --squash')
