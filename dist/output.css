@@ -472,40 +472,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.container{
-  width: 100%;
-}
-
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
-
 .fixed{
   position: fixed;
 }
@@ -537,25 +503,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 20;
 }
 
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .mr-4{
   margin-right: 1rem;
-}
-
-.mt-3{
-  margin-top: 0.75rem;
-}
-
-.mt-0{
-  margin-top: 0px;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .block{
@@ -726,14 +675,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.px-64{
+  padding-left: 16rem;
+  padding-right: 16rem;
 }
 
 .pt-8{
@@ -873,11 +817,6 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-line: line-through;
 }
 
-.no-underline{
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-}
-
 #cloud-scrolling-image {
   -webkit-animation: slide 5s linear infinite;
           animation: slide 5s linear infinite;
@@ -966,6 +905,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-8xl{
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
