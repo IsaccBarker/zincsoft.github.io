@@ -17,7 +17,7 @@ def pull
   Dir.chdir('../../../')
 
   system('git fetch catnet-rfcs main')
-  system('git subtree pull --prefix src/catnet/markdown catnet-rfcs main --squash')
+  system('git subtree pull --prefix catnet/rfcs/markdown catnet-rfcs main --squash')
 end
 
 def transpile(file)
