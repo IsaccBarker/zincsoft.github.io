@@ -19,7 +19,7 @@
                 <h2 class="font-display font-bold text-4xl md:text-6xl"><a href="/projects/catnet/rfc/"><u>Go back?</u></a></h2>
             </div>
 
-            <div class="px-64 pt-16">
+            <div class="px-16 pt-16">
                 <!-- <h3 class="font-sub-mono text-lg">figure 01</h3>
                 <h2 class="font-display font-bold text-4xl md:text-6xl">Comparisons with TOR;</h2>
                 <h3 class="font-display text-3xl md:text-5xl pt-2">and other overlay networks.</h3>
@@ -67,7 +67,7 @@
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="relation-to-other-rfcs">Relation to other RFCs</h2>
 <p class="text-xl lg:text-justify tracking-wide">Provide an explanation on simular Protocols/RFCs, and why this one is diferent (or builds opon the other). You may choose to draw a ASCII chart such as the one below:</p>
 
-<pre><code>+------+ +------+ +------+      +-----+
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code>+------+ +------+ +------+      +-----+
 |Saynet| | OMTP | | UFTP |  ... | ... |
 +------+ +------+ +------+      +-----+
       |   |          |             |
@@ -90,7 +90,7 @@ Figure 1.
 
 <p class="text-xl lg:text-justify tracking-wide">While we are on the topic of code blocks, a code block must be bookended by a newline. You may create one with syntax highlighting like so (the language will be automatically detected):</p>
 
-<pre><code>/// A simple fizz buzz program.
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code>/// A simple fizz buzz program.
 fn main() {
     for i in 1..102 {
         match (i%3, i%5) {
@@ -108,7 +108,7 @@ fn main() {
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="model-of-operation">Model of operation</h2>
 <p class="text-xl lg:text-justify tracking-wide">Provide an example of what might happen. Provide some assumptions (e.g. <code>this transmission will involve one intermediate gateway.</code>) if needed, and then provide a step by step example of the intercommunication that might occur. You may also provide a diagram to assist.</p>
 
-<pre><code>Application                                         Application
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code>Application                                         Application
    Program                                          Program
           \                                        /
        Catnet Module    Catnet Module        Catnet Module

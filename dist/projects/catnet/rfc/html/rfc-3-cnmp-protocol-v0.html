@@ -19,7 +19,7 @@
                 <h2 class="font-display font-bold text-4xl md:text-6xl"><a href="/projects/catnet/rfc/"><u>Go back?</u></a></h2>
             </div>
 
-            <div class="px-64 pt-16">
+            <div class="px-16 pt-16">
                 <!-- <h3 class="font-sub-mono text-lg">figure 01</h3>
                 <h2 class="font-display font-bold text-4xl md:text-6xl">Comparisons with TOR;</h2>
                 <h3 class="font-display text-3xl md:text-5xl pt-2">and other overlay networks.</h3>
@@ -113,8 +113,8 @@
 
 <p class="text-xl lg:text-justify tracking-wide">Below is a list of all the RFCs that use CNMP.</p>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Name</th>
       <th style="text-align: right">RFC</th>
@@ -122,8 +122,8 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">APRR</td>
-      <td style="text-align: right">6</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">APRR</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">6</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="base-header-format">Base Header Format</h2>
 <p class="text-xl lg:text-justify tracking-wide">The following is a simple diagram showing the makeup of the CNMP protocol.</p>
 
-<pre><code> 0                   1                   2                   3
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                      See HHS                      |   Type    |
@@ -150,8 +150,8 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 </code></pre>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Field</th>
       <th style="text-align: center">Bits</th>
@@ -161,22 +161,22 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Type</td>
-      <td style="text-align: center">6</td>
-      <td style="text-align: center">Class of message.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Type</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">6</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Class of message.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Code</td>
-      <td style="text-align: center">6</td>
-      <td style="text-align: center">Details of class.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Code</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">6</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Details of class.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Port</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">Identifies the fragment stream.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Port</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">16</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Identifies the fragment stream.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
   </tbody>
 </table>

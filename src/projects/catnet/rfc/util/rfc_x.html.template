@@ -19,7 +19,7 @@
                 <h2 class="font-display font-bold text-4xl md:text-6xl"><a href="/projects/catnet/rfc/"><u>Go back?</u></a></h2>
             </div>
 
-            <div class="px-64 pt-16">
+            <div class="px-16 pt-16">
                 <!-- <h3 class="font-sub-mono text-lg">figure 01</h3>
                 <h2 class="font-display font-bold text-4xl md:text-6xl">Comparisons with TOR;</h2>
                 <h3 class="font-display text-3xl md:text-5xl pt-2">and other overlay networks.</h3>

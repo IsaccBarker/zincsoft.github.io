@@ -19,7 +19,7 @@
                 <h2 class="font-display font-bold text-4xl md:text-6xl"><a href="/projects/catnet/rfc/"><u>Go back?</u></a></h2>
             </div>
 
-            <div class="px-64 pt-16">
+            <div class="px-16 pt-16">
                 <!-- <h3 class="font-sub-mono text-lg">figure 01</h3>
                 <h2 class="font-display font-bold text-4xl md:text-6xl">Comparisons with TOR;</h2>
                 <h3 class="font-display text-3xl md:text-5xl pt-2">and other overlay networks.</h3>
@@ -122,7 +122,7 @@
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="relation-to-other-protocols">Relation to other protocols</h2>
 <p class="text-xl lg:text-justify tracking-wide">The following diagram illustrates the place of the Catnet protocol in the protocol hierarchy:</p>
 
-<pre><code>+--------+ +------+ +------+ 
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code>+--------+ +------+ +------+ 
 | Saynet | | RFTP | | UFTP |
 +--------+ +------+ +------+
         |   |          |
@@ -179,7 +179,7 @@ Figure 1.
 <p class="text-xl lg:text-justify tracking-wide">The Catnet module determines that the datagrams is for an application program in this host. It passes the data to the application program in response to a system call, passing the source address and other parameters as results of the call.</p>
 
 <h3 class="pt-8 font-display font-bold text-2xl md:text-4xl" id="diagram">Diagram</h3>
-<pre><code> Application                                        Application
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code> Application                                        Application
  Program                                                Program
     \                                                   /
   Catnet Module         Catnet Module         Catnet Module
@@ -205,7 +205,7 @@ Figure 2
 
 <p class="text-xl lg:text-justify tracking-wide">You may notice how similar this is with IPv6 addresses. In fact, they are the same. We don’t need to include anything special for the CP protocol, so the CP protocol uses a tried and proven method.</p>
 
-<pre><code>                          1 1 1   1 1 1 1
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code>                          1 1 1   1 1 1 1
  0  1 2 3 4   5 6 7 8   9 0 1 2   3 4 5 6
  0 8 6 4 2 0 8 6 4 2 0 8 6 4 2 0 8 6 4 2 
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -242,7 +242,7 @@ Figure 2
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="base-header-format">Base Header Format</h2>
 <p class="text-xl lg:text-justify tracking-wide">The following is a simple diagram showing the makeup of the CPv0 header.</p>
 
-<pre><code> 0                   1                   2                   3
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 | Version |   T   |          Payload Length       |H|A| Padding |
@@ -267,8 +267,8 @@ Figure 2
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 </code></pre>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Field</th>
       <th style="text-align: center">Bits</th>
@@ -278,52 +278,52 @@ Figure 2
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Version</td>
-      <td style="text-align: center">5</td>
-      <td style="text-align: center">The version of the CP protocol.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Version</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">5</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The version of the CP protocol.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">T</td>
-      <td style="text-align: center">4</td>
-      <td style="text-align: center">The traffic class for priority specification.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">T</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">4</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The traffic class for priority specification.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Payload Length</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">The length of everything below this header.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Payload Length</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">16</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The length of everything below this header.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">H</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">Is there a header below this one?</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">H</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">1</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Is there a header below this one?</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">A</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">Is alias routing enabled?</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">1</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Is alias routing enabled?</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Hop Limit</td>
-      <td style="text-align: center">9</td>
-      <td style="text-align: center">The number of times this packet can be forwarded.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Hop Limit</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">9</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The number of times this packet can be forwarded.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Destination Address</td>
-      <td style="text-align: center">128</td>
-      <td style="text-align: center">The destination of the packet (ish).</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Destination Address</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">128</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The destination of the packet (ish).</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Sender Address</td>
-      <td style="text-align: center">128</td>
-      <td style="text-align: center">The sender of the packet. Optional with alias header.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Sender Address</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">128</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The sender of the packet. Optional with alias header.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
   </tbody>
 </table>
@@ -334,8 +334,8 @@ Figure 2
 <h3 class="pt-8 font-display font-bold text-2xl md:text-4xl" id="traffic-class-t">Traffic Class (T)</h3>
 <p class="text-xl lg:text-justify tracking-wide">Specifies the quality of service that is desired. Each bit depicts the requested quality of a certain aspect of the network (0 being normal and 1 being high).</p>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Bit</th>
       <th style="text-align: right">Description</th>
@@ -343,20 +343,20 @@ Figure 2
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">0</td>
-      <td style="text-align: right">Must be 0. Sanity check.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">0</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Must be 0. Sanity check.</td>
     </tr>
     <tr>
-      <td style="text-align: left">1</td>
-      <td style="text-align: right">Throughput</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">1</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Throughput</td>
     </tr>
     <tr>
-      <td style="text-align: left">2</td>
-      <td style="text-align: right">Delay</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">2</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Delay</td>
     </tr>
     <tr>
-      <td style="text-align: left">3</td>
-      <td style="text-align: right">Reliability</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">3</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Reliability</td>
     </tr>
   </tbody>
 </table>
@@ -383,7 +383,7 @@ Figure 2
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="alias-header-format-1">Alias Header Format</h2>
 <p class="text-xl lg:text-justify tracking-wide">The following is a simple diagram showing the makeup of the alias header. Unlike every other header, this one goes in the sender field of the CP header if the A bit is set to 1.</p>
 
-<pre><code> 0                   1                   2                   3
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                      See HHS                      | Alias Pos |
@@ -402,8 +402,8 @@ Figure 2
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 </code></pre>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Field</th>
       <th style="text-align: center">Bits</th>
@@ -413,22 +413,22 @@ Figure 2
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Alias Pos</td>
-      <td style="text-align: center">6</td>
-      <td style="text-align: center">The position of the alias.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Alias Pos</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">6</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The position of the alias.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Alias Address</td>
-      <td style="text-align: center">128</td>
-      <td style="text-align: center">CP address of the alias.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Alias Address</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">128</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">CP address of the alias.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Verification Token</td>
-      <td style="text-align: center">64</td>
-      <td style="text-align: center">A verification token.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Verification Token</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">64</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">A verification token.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
   </tbody>
 </table>
@@ -439,8 +439,8 @@ Figure 2
 <h3 class="pt-8 font-display font-bold text-2xl md:text-4xl" id="alias-position-alias-pos">Alias Position (Alias Pos)</h3>
 <p class="text-xl lg:text-justify tracking-wide">The position of the alias. Below is a table explaining the meaning of each bit.</p>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Bit</th>
       <th style="text-align: right">Description</th>
@@ -448,20 +448,20 @@ Figure 2
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">0</td>
-      <td style="text-align: right">Type of alias routing.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">0</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Type of alias routing.</td>
     </tr>
     <tr>
-      <td style="text-align: left">1</td>
-      <td style="text-align: right">Entrance alias node.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">1</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Entrance alias node.</td>
     </tr>
     <tr>
-      <td style="text-align: left">2</td>
-      <td style="text-align: right">Exit alias node.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">2</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Exit alias node.</td>
     </tr>
     <tr>
-      <td style="text-align: left">3-4</td>
-      <td style="text-align: right">Reserved</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">3-4</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">Reserved</td>
     </tr>
   </tbody>
 </table>
@@ -478,7 +478,7 @@ Figure 2
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="fragment-header-format">Fragment Header Format</h2>
 <p class="text-xl lg:text-justify tracking-wide">The following is a simple diagram showing the makeup of the fragment header.</p>
 
-<pre><code> 0                   1                   2                   3
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                      See HHS                      |  Padding  |
@@ -489,8 +489,8 @@ Figure 2
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 </code></pre>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Field</th>
       <th style="text-align: center">Bits</th>
@@ -500,16 +500,16 @@ Figure 2
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Fragment Offset</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">Offset data from original fragment.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Fragment Offset</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">16</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Offset data from original fragment.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Stream Token</td>
-      <td style="text-align: center">22</td>
-      <td style="text-align: center">Identifies the fragment stream.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Stream Token</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">22</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">Identifies the fragment stream.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
   </tbody>
 </table>
@@ -523,7 +523,7 @@ Figure 2
 <h4 class="pt-8 font-display font-bold text-2xl md:text-4xl" id="fragmentable-segment-vs-unfragmentable-segment">Fragmentable Segment vs Unfragmentable Segment</h4>
 <p class="text-xl lg:text-justify tracking-wide">In the above section labeled “Fragment Offset”, the term fragmentable segment was used. While this is defined in the vocabulary section, here is a helpful diagram.</p>
 
-<pre><code>+------------------+----------------------//-----------------------+
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code>+------------------+----------------------//-----------------------+
 |  Unfragmentable  |                 Fragmentable                  |
 |       Part       |                     Part                      |
 +------------------+----------------------//-----------------------+

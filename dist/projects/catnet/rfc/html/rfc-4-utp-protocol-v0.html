@@ -19,7 +19,7 @@
                 <h2 class="font-display font-bold text-4xl md:text-6xl"><a href="/projects/catnet/rfc/"><u>Go back?</u></a></h2>
             </div>
 
-            <div class="px-64 pt-16">
+            <div class="px-16 pt-16">
                 <!-- <h3 class="font-sub-mono text-lg">figure 01</h3>
                 <h2 class="font-display font-bold text-4xl md:text-6xl">Comparisons with TOR;</h2>
                 <h3 class="font-display text-3xl md:text-5xl pt-2">and other overlay networks.</h3>
@@ -60,7 +60,7 @@
 <h2 class="pt-8 font-display font-bold text-3xl md:text-5xl" id="base-header-format">Base Header Format</h2>
 <p class="text-xl lg:text-justify tracking-wide">The following is a simple diagram showing the makeup of the UTP protocol.</p>
 
-<pre><code> 0                   1                   2                   3
+<pre class="py-8 text-xl lg:text-justify tracking-wide"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                      See HHS                      |  Padding  |
@@ -71,8 +71,8 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 </code></pre>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Field</th>
       <th style="text-align: center">Bits</th>
@@ -82,22 +82,22 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Source Port</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">The originating port, except for in alias routing.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Source Port</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">16</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The originating port, except for in alias routing.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Destination Port</td>
-      <td style="text-align: center">16</td>
-      <td style="text-align: center">The destination port.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Destination Port</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">16</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The destination port.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
     <tr>
-      <td style="text-align: left">Datagram Length</td>
-      <td style="text-align: center">20</td>
-      <td style="text-align: center">The length of the datagram.</td>
-      <td style="text-align: right">N/A</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">Datagram Length</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">20</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: center">The length of the datagram.</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">N/A</td>
     </tr>
   </tbody>
 </table>
@@ -121,8 +121,8 @@
 
 <p class="text-xl lg:text-justify tracking-wide">Each UTP complimentary header is defined in its own RFC. Below is a list.</p>
 
-<table class="pt-16 text-xl lg:text-justify tracking-wide">
-  <thead>
+<table class="text-center border-2 border-black text-xl text-left text-gray-500">
+  <thead class="border-2 border-black text-xl text-gray-700 uppercase">
     <tr>
       <th style="text-align: left">Name</th>
       <th style="text-align: right">RFC</th>
@@ -130,8 +130,8 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">ATP</td>
-      <td style="text-align: right">5</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: left">ATP</td>
+      <td class="border-2 border-black text-xl text-gray-700 p-4" style="text-align: right">5</td>
     </tr>
   </tbody>
 </table>
