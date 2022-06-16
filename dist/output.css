@@ -684,6 +684,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
+.pb-16{
+  padding-bottom: 4rem;
+}
+
 .pt-8{
   padding-top: 2rem;
 }
