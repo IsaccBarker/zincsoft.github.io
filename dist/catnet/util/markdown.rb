@@ -17,7 +17,7 @@ def pull
   Dir.chdir('../../../')
 
   system('git fetch catnet-rfcs main')
-  system('git subtree pull --prefix catnet/rfcs/markdown catnet-rfcs main --squash')
+  system('git subtree pull --prefix src/catnet/markdown catnet-rfcs main --squash')
 end
 
 def transpile(file)
@@ -32,7 +32,7 @@ def transpile(file)
 end
 
 def get_new_index
-  template_data = File.open('index.template.html').read
+  index = File.open('../rfc.html.template').read
   template_entry = '''<div style="padding-bottom: 25px">
 <a class="no-underline h5 bold text-accent" title="rfc-0-standardising-rfcs.html" href="<!-- HTML FILE -->">RFC <!-- RFC --></a>
 <h2 class="h1 lh-condensed col-9 mt-0"><a class="link-primary" title="rfc-0-standardising-rfcs.html" href="<!-- HTML FILE -->"><!-- TITLE --></a></h2>
@@ -47,9 +47,10 @@ def get_new_index
     end
 
     current = template_entry
+
+    puts file.gsub(".html", ".md")
     markdown_file = "./markdown/" + file.gsub(".html", ".md")
     markdown_data = File.open("." + markdown_file).read
-
     current = current.gsub('<!-- HTML FILE -->', './html/' + file)
     current = current.gsub('<!-- MARKDOWN FILE -->', markdown_file)
     current = current.gsub('<!-- TITLE -->', markdown_data.lines.first)
@@ -58,9 +59,9 @@ def get_new_index
     total.prepend(current)
   end
 
-  template_data = template_data.gsub('<!-- INDEX -->', total)
+  index = index.gsub('<!-- INDEX -->', total)
 
-  return template_data
+  return index
 end
 
 if ARGV.length == 0
@@ -81,20 +82,22 @@ elsif ARGV[0] == 'html'
     exit
   end
 
-  progressbar = ProgressBar.create(:total => ARGV.length - 1, :length => 100, :progress_mark => '#', :remainder_mark => '-')
+  # progressbar = ProgressBar.create(:total => ARGV.length - 1, :length => 100, :progress_mark => '#', :remainder_mark => '-')
 
   ARGV.drop(1).each do |file|
     friendly = file.split('/')[-1].gsub('.md', '')
 
-    progressbar.log friendly + '...'
+    # progressbar.log friendly + '...'
+    puts friendly + '...'
 
-    File.open('../html/' + friendly + '.html', 'w') { |f| f.write transpile(file) }
+    File.open('../html/' + friendly + '.html', 'w+') { |f| f.write transpile(file) }
 
-    progressbar.increment
+    # progressbar.increment
   end
 
   puts 'Writting index...'
-  File.open('../index.html', 'w') { |f| f.write get_new_index }
+  puts get_new_index
+  # File.open('../index.html', 'w') { |f| f.write get_new_index }
 
   exit
 end

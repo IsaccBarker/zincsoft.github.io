@@ -32,7 +32,7 @@ def transpile(file)
 end
 
 def get_new_index
-  template_data = File.open('index.template.html').read
+  index = File.open('../rfc.html.template').read
   template_entry = '''<div style="padding-bottom: 25px">
 <a class="no-underline h5 bold text-accent" title="rfc-0-standardising-rfcs.html" href="<!-- HTML FILE -->">RFC <!-- RFC --></a>
 <h2 class="h1 lh-condensed col-9 mt-0"><a class="link-primary" title="rfc-0-standardising-rfcs.html" href="<!-- HTML FILE -->"><!-- TITLE --></a></h2>
@@ -59,9 +59,9 @@ def get_new_index
     total.prepend(current)
   end
 
-  template_data = template_data.gsub('<!-- INDEX -->', total)
+  index = index.gsub('<!-- INDEX -->', total)
 
-  return template_data
+  return index
 end
 
 if ARGV.length == 0
@@ -96,7 +96,7 @@ elsif ARGV[0] == 'html'
   end
 
   puts 'Writting index...'
-  get_new_index
+  puts get_new_index
   # File.open('../index.html', 'w') { |f| f.write get_new_index }
 
   exit
